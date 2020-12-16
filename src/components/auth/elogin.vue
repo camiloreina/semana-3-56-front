@@ -1,36 +1,42 @@
 <template>
-  <div class="container mt-5">
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
+  <div id="contenedor" class="border border-secondary rounded p-4">
+
+    <div class="md-form form-group w-75">
+      <div class="input-group">
+        <i class="fa fa-user prefix"></i>
         <input
           v-model="login.email"
           type="email"
-          class="form-control"
+          class="form-control" 
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-        />
-        <small id="emailHelp" class="form-text text-muted"
-          >We'll never share your email with anyone else.</small
+          placeholder="Ingrese correo"
         >
       </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
+    </div>
+
+
+    <div class="md-form form-group w-75">
+      <div class="input-group">
+        <i class="fa fa-key prefix"></i>
         <input
           v-model="login.password"
           type="password"
           class="form-control"
           id="exampleInputPassword1"
-        />
+          placeholder="Password"
+        >
       </div>
+    </div>
 
-      <button 
-      @click.prevent ="LoginUser"
-      type="submit" 
-      class="btn btn-primary">Submit</button>
-    </form>
+    <button 
+    @click.prevent ="LoginUser"
+    type="submit" 
+    class="btn btn-dark active">Ingresar</button>
+
   </div>
 </template>
+
 <script>
 export default {
   name: "elogin",
@@ -65,3 +71,9 @@ export default {
   }
 };
 </script>
+<style scoped>
+#contenedor {
+  background-color: rgb(210, 210, 216);
+}
+
+</style>
